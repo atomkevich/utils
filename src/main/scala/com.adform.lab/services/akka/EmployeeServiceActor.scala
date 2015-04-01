@@ -123,7 +123,7 @@ class EmployeeServiceActor extends Actor with ActorLogging with EmployeeReposito
       case pods => FaultResult("Pod " + parentId + "already has PODKeeper or PODLead", None) failureNel
     }
   }
-  
+
 
   def getAncestorsById(parentId: Option[String]) = parentId match {
     case Some(id) =>
